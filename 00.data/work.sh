@@ -1,0 +1,21 @@
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/00.data_v2020/* ./
+rm Fun_ASV_9343_2276.rds Fun_ASV_9342_2268.rds Fun_ASV_seq.fasta
+mv Fun_ASV_raref_9337_2232.rds Fun_ASV_raref.rds
+mv Fun_ASV_seq_9337.fasta Fun_ASV_seq.fasta
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/04.alpha_diversity/Bac_alpha_mean.txt  ./
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/04.alpha_diversity/Fun_alpha_mean.txt  ./
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/03.beta_diversity/Bac_ASV_bc.rds ./
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/03.beta_diversity/Fun_ASV_bc.rds ./
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/01.taxonomic_profiling/Bac_tax.txt  Bac_tax_sum.txt
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/01.taxonomic_profiling/Fun_tax_2232.txt  Fun_tax_sum.txt
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/06.RA_Occu_disbribution_all_rep/Bacteria_ASV_rep.rds  Bac_ASV_rep.rds
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/06.RA_Occu_disbribution_all_rep/Fungi_ASV_rep.rds Fun_ASV_rep.rds
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/12.global_network/Global_density.txt ./
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/12.global_network/Bacteria_* ../08.figure_4.7/
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/12.global_network/Fungi_*.txt ../08/figure_4.7/
+cp /srv/netscratch/dep_psl/grp_rgo/guan/department_seminar_20210309/01.CAS_RepASVs/design_854.txt ../11.figure_4.13/design_CAS.txt
+cp /srv/netscratch/dep_psl/grp_rgo/guan/department_seminar_20210309/01.CAS_RepASVs/RA_of_rep_ASVs/CAS_RepASVs_RA.txt  ../11.figure_4.13/
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/08.alpha_diversity_rep_ASV/Bacteria_mean_alpha.txt  Bac_alpha_mean_repASVs.txt
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/22.CAS/02.figure_4_v20210525/CAS_rep_ASV_reNorm.rds ./
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/22.CAS/02.figure_4_v20210525/01.network_cluster/Bacteria_spearman_ap_tab.txt CAS_spearman_ap_tab.txt
+cp /biodata/dep_psl/grp_rgo/guan/20200616_figures/19.MANUSCRIPT/22.CAS/02.figure_4_v20210525/01.network_cluster/Bacteria_spearman_ap_dis.rds CAS_spearman_ap_dis.rds
