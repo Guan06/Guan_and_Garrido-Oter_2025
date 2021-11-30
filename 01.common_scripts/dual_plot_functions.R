@@ -81,3 +81,22 @@ plot_occu_RA <- function(g, t = "Family"){
     p <- plot_grid(p12, p34, nrow = 1, align = "h", axis = "b")
 }
 
+
+## plot the distribution at the ASV level only
+plot_occu_RA_ASV <- function(g) {
+    this_des <- des[des$Group == g, ]
+    this_asv <- asv[, colnames(asv) %in% this_des$Sample_ID]
+    this_asv <- this_asv[rowSums(this_asv) > 0, colSums(this_asv) > 0]
+
+    this_fill <- unique(this_des$Compartment)
+    occu <- data.frame(Taxonomy = rownames(this_asv),
+                       Occu = rowSums(this_asv > 0),
+                       RA = rowSums(this_asv) / ncol(this_asv),
+                       Compartment = this_fill,
+                       Rank = "ASV",
+                       Tax_num = nrow(this_asv))
+    occu <- occu[order(occu$Occu),]
+
+    ## plot at the ASV level
+    p12 <- plot_dual(occu)
+}
