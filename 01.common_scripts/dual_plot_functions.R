@@ -100,3 +100,37 @@ plot_occu_RA_ASV <- function(g) {
     ## plot at the ASV level
     p12 <- plot_dual(occu)
 }
+
+## plot the distribution at the Class level only
+plot_occu_RA_tax <- function(g, t = "Class") {
+     this_des <- des[des$Group == g, ]
+    this_asv <- asv[, colnames(asv) %in% this_des$Sample_ID]
+    this_asv <- this_asv[rowSums(this_asv) > 0, colSums(this_asv) > 0]
+
+    this_fill <- unique(this_des$Compartment)
+   
+    this_tax <- tax[rownames(tax) %in% rownames(this_asv), ]
+    this_tax[[t]][is.na(this_tax[[t]])] <- "Unassigned"
+
+    TAX <- as.factor(this_tax[[t]])
+    tab_TAX <- apply(this_asv, 2, function(x) rowsum(x, TAX))
+    rownames(tab_TAX) <- levels(TAX)
+
+    un_ratio <- sum(tab_TAX[rownames(tab_TAX) == "Unassigned", ]) /
+            ncol(tab_TAX)
+    print(paste(g, t, un_ratio))
+
+    this_tax_occu <- data.frame(Taxonomy = rownames(tab_TAX),
+                            Occu = rowSums(tab_TAX > 0),
+                            RA = rowSums(tab_TAX) / ncol(tab_TAX),
+                            Compartment = this_fill,
+                            Rank = t,
+                            Tax_num = nrow(tab_TAX))
+
+    this_tax_occu <- this_tax_occu[order(this_tax_occu$Occu),]
+
+    ## filter unassigned
+    this_tax_occu <- this_tax_occu[this_tax_occu$Taxonomy != "Unassigned", ]
+    ## plot at the Family level
+    p <- plot_dual(this_tax_occu)
+}

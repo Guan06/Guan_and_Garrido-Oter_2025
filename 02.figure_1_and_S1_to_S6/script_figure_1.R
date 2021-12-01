@@ -155,7 +155,7 @@ write.table(RA, ra_file, quote = F, sep = "\t", row.names = F)
 RA_p2 <- RA[RA$Compartment %in%
             c("soil", "rhizosphere", "rhizoplane", "root"), ]
 
-p_f <- ggplot(RA_p1, aes(x = RA_rep, y = Compartment, fill = Compartment),
+p_f <- ggplot(RA_p2, aes(x = RA_rep, y = Compartment, fill = Compartment),
              color = "gray48") +
     geom_density_ridges(scale = 0.5, quantile_lines = TRUE, quantiles = 2,
                         color = "gray48") +
