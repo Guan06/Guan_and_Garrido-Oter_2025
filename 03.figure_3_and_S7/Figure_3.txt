@@ -1,0 +1,61 @@
+## For bacteria, panels a and c
+Call:
+adonis(formula = dis_bs ~ Group, data = design, parallel = 40,      by = "margin", add = F)
+
+Permutation: free
+Number of permutations: 999
+
+Terms added sequentially (first to last)
+
+           Df SumsOfSqs MeanSqs F.Model     R2 Pr(>F)
+Group       3    727248  242416  644.95 0.7468  0.001 ***
+Residuals 656    246569     376         0.2532
+Total     659    973816                 1.0000
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+adonis(formula = dis_pm ~ Group, data = design, parallel = 40,      by = "margin", add = F)
+
+Permutation: free
+Number of permutations: 999
+
+Terms added sequentially (first to last)
+
+           Df SumsOfSqs MeanSqs F.Model      R2 Pr(>F)
+Group       3     59499 19833.2  24.367 0.15717  0.001 ***
+Residuals 392    319060   813.9         0.84283
+Total     395    378559                 1.00000
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+## For fungi, panels b and d
+Call:
+adonis(formula = dis_bs ~ Group, data = design, parallel = 40,      by = "margin", add = F)
+
+Permutation: free
+Number of permutations: 999
+
+Terms added sequentially (first to last)
+
+           Df SumsOfSqs MeanSqs F.Model      R2 Pr(>F)
+Group       3    241572   80524  1633.4 0.88193  0.001 ***
+Residuals 656     32339      49         0.11807
+Total     659    273911                 1.00000
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+adonis(formula = dis_pm ~ Group, data = design, parallel = 40,      by = "margin", add = F)
+
+Permutation: free
+Number of permutations: 999
+
+Terms added sequentially (first to last)
+
+           Df SumsOfSqs MeanSqs F.Model      R2 Pr(>F)
+Group       3     16276  5425.2  35.296 0.21268  0.001 ***
+Residuals 392     60252   153.7         0.78732
+Total     395     76528                 1.00000
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
