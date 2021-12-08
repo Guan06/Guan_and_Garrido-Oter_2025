@@ -1,0 +1,29 @@
+Call:
+adonis(formula = dis_bs ~ Group, data = design, parallel = 40,      by = "margin", add = F)
+
+Permutation: free
+Number of permutations: 999
+
+Terms added sequentially (first to last)
+
+            Df SumsOfSqs  MeanSqs F.Model      R2 Pr(>F)
+Group        6 137232678 22872113  6268.1 0.95333  0.001 ***
+Residuals 1841   6717786     3649         0.04667
+Total     1847 143950464                  1.00000
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+adonis(formula = dis_pm ~ Group, data = design, parallel = 40,      by = "margin", add = F)
+
+Permutation: free
+Number of permutations: 999
+
+Terms added sequentially (first to last)
+
+            Df SumsOfSqs MeanSqs F.Model      R2 Pr(>F)
+Group        6  20233960 3372327  90.363 0.28221  0.001 ***
+Residuals 1379  51463742   37320         0.71779
+Total     1385  71697701                 1.00000
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
