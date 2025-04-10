@@ -10,13 +10,13 @@ All the data used in this study is published and cited. Scripts used to generate
 
 In this repository, you will find the following subfolders:
 
-- 00.data
+- __00.data__
 	This folder contains metadata of samples, relative abundance of bacteria and fungi in ASV table format processed with the DADA2-based pipeline [here](https://github.com/Guan06/DADA2_pipeline), taxonomic assignments of ASVs, and calculated alpha diversity (average of 999 bootstrap).
 
-- 01.common_scripts
+- __01.common_scripts__
 	This folder holds functions and plot settings used in each subfolder to reproduce analyses and figures.
 
-- 02.figure_1_and_S1_to_S4
+- __02.figure_1_and_S1_to_S4__
 	This folder contains scripts to process and visualize results for 
 		- Main Figure 1.
 		- Supplementary Figures 1-4. 
@@ -28,4 +28,4 @@ Additional subfolders named in the same way contains similar files with a consis
 
 This repository is written by [Rui Guan](https://github.com/Guan06) with contributions from [Ruben Garrido-Oter](https://github.com/garridoo).
 
-Follow me on Bluesky at guan06rui.bsky.social](https://bsky.app/profile/guan06rui.bsky.social).
+Follow me on Bluesky at [guan06rui.bsky.social](https://bsky.app/profile/guan06rui.bsky.social).
