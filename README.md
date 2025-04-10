@@ -5,3 +5,27 @@ Microbial communities are key components of most ecosystems, where interactions 
 
 ### Data and code availability
 All the data used in this study is published and cited. Scripts used to generate the analyses and figures could be found in this repository. The R package ‘mina’ can be downloaded and installed from either Bioconductor [10.18129/B9.bioc.mina](https://www.bioconductor.org/packages/release/bioc/html/mina.html) or GitHub repository [mina](https://github.com/Guan06/mina).
+
+### Repository structure
+
+In this repository, you will find the following subfolders:
+
+- 00.data
+	This folder contains metadata of samples, relative abundance of bacteria and fungi in ASV table format processed with the DADA2-based pipeline [here](https://github.com/Guan06/DADA2_pipeline), taxonomic assignments of ASVs, and calculated alpha diversity (average of 999 bootstrap).
+
+- 01.common_scripts
+	This folder holds functions and plot settings used in each subfolder to reproduce analyses and figures.
+
+- 02.figure_1_and_S1_to_S4
+	This folder contains scripts to process and visualize results for 
+		- Main Figure 1.
+		- Supplementary Figures 1-4. 
+		- Statistical results and script output are also included.
+
+Additional subfolders named in the same way contains similar files with a consistent structure.
+
+### Authors and contributors 
+
+This repository is written by [Rui Guan](https://github.com/Guan06) with contributions from [Ruben Garrido-Oter](https://github.com/garridoo).
+
+Follow me on Bluesky at guan06rui.bsky.social](https://bsky.app/profile/guan06rui.bsky.social).
