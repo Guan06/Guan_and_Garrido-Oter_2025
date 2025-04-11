@@ -18,9 +18,9 @@ In this repository, you will find the following subfolders:
 
 - __02.figure_1_and_S1_to_S4__
 	This folder contains scripts to process and visualize results for 
-		- Main Figure 1.
-		- Supplementary Figures 1-4. 
-		- Statistical results and script output are also included.
+        1) Main Figure 1.
+		2) Supplementary Figures 1-4. 
+		3) Statistical results and script output are also included.
 
 Additional subfolders named in the same way contains similar files with a consistent structure.
 
