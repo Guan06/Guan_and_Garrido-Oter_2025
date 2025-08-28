@@ -53,8 +53,9 @@ diag(mat_p) <- 1
 vect_q <- p.adjust(mat_p, method = "fdr")
 mat_q <- matrix(vect_q, nrow = nrow(mat_p), ncol = ncol(mat_p))
 
-#mat_cor[mat_p > 0.05] <- 0
-
+mat_cor[mat_q > 0.05] <- 0
+rm(mat_p)
+rm(mat_q)
 
 ################################################################################
 ### 2025.06.26 Test multiple threshold and how they affect cluster number
@@ -87,13 +88,73 @@ for (t in lst) {
 
 #cls_ap <- net_cls(mat_cor, method = "ap", cutoff = 0)
 
-ap <- apcluster(mat_cor, p = 0)
-cls_ap <- re_format_AP(ap)
+ap_default <- apcluster(mat_cor)
+cls_ap_default <- re_format_AP(ap_default)
 
-cls_ap_tab <- get_net_cls_tab(asv, cls_ap)
+## test different parameters for p and q
+all <- c()
+for (p in seq(0, 1, 0.1)) {
+  for (q in seq(0, 1, 0.1)){
+    this_ap <- apcluster(mat_cor, p = p, q = q)
+    
+    this_cls <- re_format_AP(this_ap)
+    
+    print(paste(p, q, length(unique(this_cls$Exemplar))))
+    
+    this_cls$p <- p
+    this_cls$q <- q
+    
+    all <- rbind(all, this_cls)
+  }
+}
+
+saveRDS(all, "20250709_pq_test_AP.rds")
 
 ################################################################################
-### Plot cluster size
+#### test a range of inflation values 
+library(MCL)
+
+# Run MCL with each inflation value
+all <- c()
+
+# Scale the matrix to a range of 1 to 2 as MCL only takes positive values
+#scaled_mat_cor <- mat_cor + 1 
+#diag(scaled_mat_cor) <- 0
+
+mat_cor2 <- mat_cor
+## use only positive edges
+mat_cor2[mat_cor2 < 0] <- 0
+
+exp_range <- seq(2, 5, 0.5)
+inf_range <- seq(2, 5, 0.5)
+for (expansion in exp_range) {
+  for (inflation in inf_range) {
+    # Run MCL with the current inflation value
+    mcl_result <- mcl(mat_cor2, addLoops = T,
+                      expansion = expansion,
+                      inflation = inflation)
+    
+    # Evaluate the resulting clusters
+    num_clusters <- length(unique(mcl_result$Cluster))
+    
+    print(paste(expansion, inflation, num_clusters))
+  }
+}
+
+# Plot the results
+ggplot(results, aes(x = inflation, y = num_clusters)) +
+  geom_point() +
+  geom_line() +
+  labs(x = "Inflation", y = "Number of Clusters")
+
+
+# ap <- apcluster(mat_cor, p = 0)
+# cls_ap <- re_format_AP(ap)
+# 
+# cls_ap_tab <- get_net_cls_tab(asv, cls_ap)
+
+################################################################################
+### Plot cluster size pf AP
 t <- unique(cls_ap[, 3:4])
 ggplot(t, aes(Cluster_size)) + 
   geom_histogram(binwidth = 1) + 

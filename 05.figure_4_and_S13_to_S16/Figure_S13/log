@@ -1,0 +1,24 @@
+
+	Pearson's product-moment correlation
+
+data:  d12$Decrease_At and d12$Decrease_Lj
+t = 3.8464, df = 117, p-value = 0.0001956
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.1650017 0.4857481
+sample estimates:
+      cor 
+0.3350465 
+
+
+	Pearson's product-moment correlation
+
+data:  d12$Decrease_At and d12$Decrease_Lj
+t = 8.8343, df = 132, p-value = 5.442e-15
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.4906976 0.7061509
+sample estimates:
+      cor 
+0.6095604 
+

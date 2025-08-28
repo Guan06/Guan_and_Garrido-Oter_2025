@@ -1,0 +1,8 @@
+[1] "R2 of AP cluster(bio_factors) for bacterial community: "
+[1] 0.231
+[1] "R2 of AP cluster(bio and tech facotrs) for bacterial community: "
+[1] 0.154
+[1] "R2 of AP cluster(bio_factors) for fungal community: "
+[1] 0.241
+[1] "R2 of AP cluster(bio and tech facotrs) for fungal community: "
+[1] 0.12

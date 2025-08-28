@@ -19,10 +19,10 @@ In this repository, you will find the following subfolders:
 - __01.common_scripts__
 	This folder holds functions and plot settings used in each subfolder to reproduce analyses and figures.
 
-- __02.figure_1_and_S1_to_S4__
+- __02.figure_1_and_S1_to_S7__
 	This folder contains scripts to process and visualize results for 
         1) Main Figure 1.
-		2) Supplementary Figures 1-4. 
+		2) Supplementary Figures 1-7. 
 		3) Statistical results and script output are also included.
 
 Additional subfolders named in the same way contains similar files with a consistent structure.
