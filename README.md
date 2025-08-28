@@ -1,8 +1,5 @@
 ## Integrated diversity and network analyses reveal drivers of microbiome dynamics
 
-### Abstract
-Microbial communities are key components of ecosystems, where interactions among microbes drive biodiversity and productivity. Increased number of microbiome datasets are available owing to advance in sequencing, yet standard analyses often focus on community composition, neglecting the complex interactions between co-occurring microbes. To address this, we developed a computational framework integrating compositional and co-occurrence network analyses. We applied to extensive microbial amplicon datasets, focusing on plant microbiota, which typically exhibits high diversity and remains challenging to characterize due to the large number of low-abundance taxa. We show that identifying a subset of representative microbial taxa captures the overall community structure and increases the statistical power. From these taxa, we inferred a large-scale co-occurrence network and clustered microbes with co-varying abundances into units for diversity measurement. This approach not only reduces unexplained variance in diversity assessments but also captures the key microbe–microbe relationships that govern assembly patterns. Furthermore, we introduced a bootstrap- and permutation-based statistical approach to compare microbial networks from diverse conditions. Our method robustly distinguishes meaningful differences and pinpoints specific microbes and features driving those differences. These results highlight the importance of incorporating microbe-microbe interactions in microbiota studies, leading to more accurate and ecologically meaningful insights. Our framework, available as an R package ('mina'), enables researchers to identify condition-specific interactions via network comparison, and gain a deeper understanding of community ecology. With broad applicability beyond plant systems, this package provides a valuable tool for leveraging microbiome data across disciplines, from agriculture to ecosystem resilience and human health.
-
 ### Importance
 Understanding microbiome dynamics requires capturing not only changes in microbial composition but also interactions between community members. Traditional approaches frequently overlook microbe-microbe interactions, limiting their ecological interpretation. Here, we introduce a novel computational framework that integrates compositional data with network-based analyses, significantly improving detection of biologically meaningful patterns in community variation. Application of this framework to a large dataset from the plant microbiota, we identify representative groups of interacting microbes driving differences across microhabitats and environmental conditions. Our analysis framework, implemented in an R package ‘mina’, provides robust tools allowing researchers to assess statistical differences between microbial networks and detect condition-specific interactions. Broadly applicable to microbiome datasets, we aim at enabling advances in our understanding of microbial interactions within complex communities.
 
@@ -21,9 +18,9 @@ In this repository, you will find the following subfolders:
 
 - __02.figure_1_and_S1_to_S7__
 	This folder contains scripts to process and visualize results for 
-        1) Main Figure 1.
-		2) Supplementary Figures 1-7. 
-		3) Statistical results and script output are also included.
+        - Main Figure 1.
+		- Supplementary Figures 1-7. 
+		- Statistical results and script output are also included.
 
 Additional subfolders named in the same way contains similar files with a consistent structure.
 
